@@ -1,0 +1,42 @@
+{
+  "name": "lupe-api",
+  "version": "1.0.0",
+  "description": "Easily way to handle with your expenses.",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "start": "NODE_ENV=development nodemon src/index.js --exec babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lipeprado/lupe-api.git"
+  },
+  "keywords": [
+    "bills",
+    "expenses",
+    "easy",
+    "todo",
+    "account"
+  ],
+  "author": "Filipe Prado @lipeprado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lipeprado/lupe-api/issues"
+  },
+  "homepage": "https://github.com/lipeprado/lupe-api#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "7",
+    "babel-preset-env": "^1.7.0",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.9"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "eslint": "^5.11.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
