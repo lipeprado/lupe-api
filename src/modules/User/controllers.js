@@ -2,7 +2,7 @@ import HTTPSTATUS from 'http-status';
 import UserModel, { encrypt } from './model';
 import isAllowed from '../../services/utils';
 
-export const getAllUsers = async (req, res) => {
+export const getAllUsers = async (_, res) => {
   const users = await UserModel.fetchAll();
   res.send({ users });
 };

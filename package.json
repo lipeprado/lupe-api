@@ -7,9 +7,19 @@
     "build": "babel src -d dist",
     "start": "NODE_ENV=development nodemon src/index.js --exec babel-node",
     "db:development": "./dbs/development/script_db.sh",
+    "db:test": "./dbs/tests/script_db.sh",
     "run:migrations": "./node_modules/.bin/knex migrate:latest",
     "run:seeds": "./node_modules/.bin/knex seed:run",
-    "env:dev": "NODE_ENV=development npm run db:development && NODE_ENV=development npm run run:migrations && NODE_ENV=development npm run run:seeds"
+    "env:dev": "NODE_ENV=development npm run db:development && NODE_ENV=development npm run run:migrations && NODE_ENV=development npm run run:seeds",
+    "env:test": "NODE_ENV=test npm run db:test && NODE_ENV=test npm run run:migrations && NODE_ENV=test npm run run:seeds",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "moduleDirectories": [
+      "src",
+      "src-example",
+      "node_modules"
+    ]
   },
   "repository": {
     "type": "git",
@@ -52,12 +62,14 @@
     "nodemon": "^1.18.9",
     "pg": "^7.7.1",
     "pretty-error": "^2.1.1",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "supertest": "^3.3.0"
   },
   "devDependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "eslint": "^5.11.1",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^23.6.0"
   }
 }
