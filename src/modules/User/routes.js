@@ -6,7 +6,7 @@ import express from 'express';
 
 import {
   registerUser, getAllUsers, updateUser, deleteUser,
-} from './controllers';
+} from './controller';
 import AuthVerification from '../../services/auth';
 
 const routes = express.Router();
