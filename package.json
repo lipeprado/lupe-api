@@ -12,7 +12,8 @@
     "run:seeds": "./node_modules/.bin/knex seed:run",
     "env:dev": "NODE_ENV=development npm run db:development && NODE_ENV=development npm run run:migrations && NODE_ENV=development npm run run:seeds",
     "env:test": "NODE_ENV=test npm run db:test && NODE_ENV=test npm run run:migrations && NODE_ENV=test npm run run:seeds",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test": "jest"
   },
   "jest": {
     "moduleDirectories": [
